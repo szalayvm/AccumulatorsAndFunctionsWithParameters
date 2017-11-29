@@ -132,7 +132,7 @@ def sum_of_digits(number):
 def run_test_digits_in_cube():
     """ Tests the   digits_in_cube   function. """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function.
+    # Done: 3. Implement this function.
     #   It TESTS the  digits_in_cube  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -157,6 +157,24 @@ def run_test_digits_in_cube():
     print('Testing the   digits_in_cube   function:')
     print('-----------------------------------------------------')
 
+    #Test 1
+    expected = 8
+    actual = digits_in_cube(5)
+    print('Test 1 expected:',expected)
+    print('         actual:',actual)
+
+    #Test 2
+    expected2 = 8
+    actual2 = digits_in_cube(2)
+    print('Test 2 expected:', expected)
+    print('         actual',actual2)
+
+    #Test 3
+    expected3 = 8
+    actual3 = digits_in_cube(8)
+    print('Test 3 expected:',expected)
+    print('         actual:',actual3)
+
 
 def digits_in_cube(n):
     """
@@ -168,7 +186,7 @@ def digits_in_cube(n):
       this function returns (1 + 2 + 5), which is 8.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -177,12 +195,14 @@ def digits_in_cube(n):
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ####################################################################
     # ------------------------------------------------------------------
-
+    output = n**3
+    digits = sum_of_digits(output)
+    return(digits)
 
 def run_test_digits_in_power():
     """ Tests the   digits_in_power   function. """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement this function.
+    # Done: 5. Implement this function.
     #   It TESTS the  digits_in_power  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -192,6 +212,24 @@ def run_test_digits_in_power():
     print('--------------------------------------------------')
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
+
+    #Test 1
+    expected1 = 9
+    actual1 = digits_in_power(3,3)
+    print('Test 1 expected:',expected1)
+    print(          'actual:',actual1)
+
+    # Test 2
+    expected2 = 5
+    actual2 = digits_in_power(5,1)
+    print('Test 2 expected:', expected2)
+    print(          'actual:', actual2)
+
+    # Test 3
+    expected3 = 1
+    actual3 = digits_in_power(1,2)
+    print('Test 3 expected:', expected3)
+    print(          'actual:', actual3)
 
 
 def digits_in_power(n, k):
@@ -206,14 +244,16 @@ def digits_in_power(n, k):
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # Done: 6. Implement and test this function.
     #
     ####################################################################
     # IMPORTANT: CALL, as many times as needed,
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ####################################################################
     # ------------------------------------------------------------------
-
+    output = n**k
+    digits = sum_of_digits(output)
+    return(digits)
 
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
