@@ -49,10 +49,10 @@ def run_test_distance():
 
 def distance(point):
     """
-    What comes in:  An rg.Point.
     What goes out:  The distance that the rg.Point is from (0, 0).
     Side effects:   None.
-    Example:
+    Example:    What comes in:  An rg.Point.
+
       If the argument is  rg.Point(3, 4)  this function returns 5.
     """
     # This code has an error, on purpose.  Do NOT fix it.
