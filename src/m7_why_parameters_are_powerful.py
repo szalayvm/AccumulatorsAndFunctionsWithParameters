@@ -10,10 +10,10 @@ import rosegraphics as rg
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_draw_circles()
+   # run_test_draw_circles()
     # Un-comment the next lines when you are ready to use them.
     run_test_better_draw_circles()
-    # run_test_even_better_draw_circles()
+    run_test_even_better_draw_circles()
 
 
 # ----------------------------------------------------------------------
@@ -140,6 +140,31 @@ def better_draw_circles(x):
 #   In testing your even_better_draw_circles function,
 #   can you make some fun pictures?
 # ----------------------------------------------------------------------
+def run_test_even_better_draw_circles():
+    print()
+    print('--------------------------------------------------')
+    print('Testing  draw_circles:  See graphics window')
+    print('--------------------------------------------------')
+    test_even_better_draw_circles(10,0.5,rg.Point(200,200))
+    test_even_better_draw_circles(10,2,rg.Point(200,200))
+
+
+
+def test_even_better_draw_circles(numberofcircles,renderspeed,centerpoint):
+    window = rg.RoseWindow(400, 400)
+
+
+    for k in range(numberofcircles):
+        circle = rg.Circle(centerpoint, 10 * k)
+        circle.attach_to(window)
+        window.render(renderspeed)
+
+
+
+
+
+
+    window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
