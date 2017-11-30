@@ -12,7 +12,7 @@ def main():
     """ Calls the   TEST   functions in this module. """
     run_test_draw_circles()
     # Un-comment the next lines when you are ready to use them.
-    # run_test_better_draw_circles()
+    run_test_better_draw_circles()
     # run_test_even_better_draw_circles()
 
 
@@ -64,7 +64,7 @@ def draw_circles():
     window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
-# TODO: 2.
+# Done: 2.
 #   First, RUN this program.  You will see that draw_circles draws
 #   concentric circles whose radii vary by 10.
 #
@@ -92,7 +92,25 @@ def draw_circles():
 #   run_test_draw_circles  may get you started more quickly on your new
 #   better_draw_circles  and  run_test_better_draw_circles.
 # ----------------------------------------------------------------------
+def run_test_better_draw_circles():
+    print()
+    print('--------------------------------------------------')
+    print('Testing  bettr_draw_circles:  See graphics window')
+    print('--------------------------------------------------')
+    better_draw_circles(2)
+    better_draw_circles(10)
+    better_draw_circles(5)
 
+def better_draw_circles(x):
+    window = rg.RoseWindow(400, 400)
+
+    center = rg.Point(200, 200)
+    for k in range(x):
+        circle = rg.Circle(center, 10 * k)
+        circle.attach_to(window)
+        window.render(0.05)  # Pauses for 0.05 seconds after rendering.
+
+    window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
 # TODO: 3.
